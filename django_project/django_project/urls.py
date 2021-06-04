@@ -15,9 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from booleanbeanblog.views import about, home
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('blog/', include('booleanbeanblog.urls')),
-    path('', include('booleanbeanblog.urls'))
+
+    path('about/', about, name=' about'),
+    path('', home, name = 'bloghome'),
+    path('admin/', admin.site.urls)
 ]
