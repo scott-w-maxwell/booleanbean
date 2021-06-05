@@ -1,7 +1,22 @@
+{% load static %}
+
+
+<style type='text/css'>
+
+body {
+    font-family: Sans-serif
+}
+
+</style>
+
 <!DOCKTYPE HTML>
 <html>
 <head>
-	</title></title>
+{% if title %}
+    <title>{{ title }}</title>
+{% else %}
+    <title>BooleanBean</title>
+{% endif %}
 </head>
 	<body>
 		{% include 'navbar.html' %}
